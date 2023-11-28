@@ -6,7 +6,7 @@ if number > 10:
     rem = number % 10
 else:
     rem = number % -10
-print(f"Last digit of {number:d} is {rem:d} and is ")
+print(f"Last digit of {number:d} is {rem:d} and is ", end = "")
 if rem > 5:
     print("greater then 5")
 elif rem == 0:
