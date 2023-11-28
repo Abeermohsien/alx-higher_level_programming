@@ -6,9 +6,9 @@ if number > 10:
     rem = number % 10
 else:
     rem = number % -10
-print(f"Last digit of {number:d} is {rem:d} and is ", end = "")
+print(f"Last digit of {number:d} is {rem:d} and is ", end="")
 if rem > 5:
-    print("greater then 5")
+    print("greater than 5")
 elif rem == 0:
     print("0")
 else:
