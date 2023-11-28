@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-uppercase = __import__('8-uppercase').uppercase
-
-uppercase("best")
-uppercase("Best School 98 Battery street") 
+#!/usr/bin/python3
+def uppercase(str):
+    for ch in str:
+        if ord(ch) >= ord('a') and ord(ch) <= ord('z'):
+            ch = chr(ord(ch) - 32)
+        print("{}".format(ch), end="")
+    print("")
