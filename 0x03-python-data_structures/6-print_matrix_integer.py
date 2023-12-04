@@ -7,6 +7,6 @@ def print_matrix_integer(matrix=[[]]):
             print()
         for j in range(len(subm)):
             if j is len(subm) - 1:
-                print("{:d}".format(subm[i]), end="\n")
+                print("{:d}".format(subm[j]), end="\n")
             else:
-                print("{:d}".format(subm[i]), end=" ")
+                print("{:d}".format(subm[j]), end=" ")
