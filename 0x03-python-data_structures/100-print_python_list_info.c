@@ -1,5 +1,4 @@
 #include <Python.h>
-
 /**
  * print_python_list_info - print list
  * @p: pointer
@@ -7,7 +6,7 @@
 void print_python_list_info(PyObject *p)
 {
 	int i, s, alloc;
-	PyObjectt *object;
+	PyObject *object;
 
 	s = Py_SIZE(p);
 	alloc = ((PyListObject *)p)->allocated;
