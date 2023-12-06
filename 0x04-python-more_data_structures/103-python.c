@@ -2,7 +2,8 @@
 
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
- /**
+ 
+/**
   * print_python_list - prints the lost
   * @p: list
   */
@@ -36,6 +37,7 @@ void print_python_bytes(PyObject *p)
 {
 	unsigned char i, s;
 	PyBytesObject *bytes = (PyBytesObject *)p;
+
 	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
 		{
@@ -57,6 +59,7 @@ void print_python_bytes(PyObject *p)
 			printf("%02hhx", bytes->ob_sval[i]);
 			if (i == (s - 1))
 				printf("\n");
-			else printf(" ");
+			else
+				printf(" ");
 		}
 }	
