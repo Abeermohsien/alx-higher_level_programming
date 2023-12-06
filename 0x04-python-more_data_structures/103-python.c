@@ -44,6 +44,7 @@ void print_python_bytes(PyObject *p)
 		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
 	}
+	
 	printf("  size: %d\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", bytes->ob_sval);
 
