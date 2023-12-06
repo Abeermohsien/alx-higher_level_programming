@@ -2,7 +2,7 @@
 
 void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
- 
+
 /**
   * print_python_list - prints the lost
   * @p: list
@@ -40,26 +40,25 @@ void print_python_bytes(PyObject *p)
 
 	printf("[.] bytes object info\n");
 	if (strcmp(p->ob_type->tp_name, "bytes") != 0)
-		{
-			printf("  [ERROR] Invalid Bytes Object\n");
-			return;
-		}
+	{
+		printf("  [ERROR] Invalid Bytes Object\n");
+		return;
+	}
+	printf("  size: %d\n", ((PyVarObject *)p)->ob_size);
+	printf("  trying string: %s\n", bytes->ob_sval);
 
-		printf("  size: %d\n", ((PyVarObject *)p)->ob_size);
-		printf("  trying string: %s\n", bytes->ob_sval);
+	if (((PyVarObject *)p)->ob_size > 10)
+		s = 10;
+	else
+		s = ((PyVarObject *)p)->ob_size + 1;
 
-		if (((PyVarObject *)p)->ob_size > 10)
-			s = 10;
+	printf("  first %d bytes: ", s);
+	for (i = 0; i < s; i++)
+	{
+		printf("%02hhx", bytes->ob_sval[i]);
+		if (i == (s - 1))
+			printf("\n");
 		else
-			s = ((PyVarObject *)p)->ob_size + 1;
-
-		printf("  first %d bytes: ", s);
-		for (i = 0; i < s; i++)
-		{
-			printf("%02hhx", bytes->ob_sval[i]);
-			if (i == (s - 1))
-				printf("\n");
-			else
-				printf(" ");
-		}
-}	
+			printf(" ");
+	}
+}
