@@ -2,7 +2,7 @@
 """sqiare"""
 
 
-class square:
+class Square:
     """square"""
     def __int__(self, size=0):
         """square"""
