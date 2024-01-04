@@ -47,12 +47,12 @@ class Rectangle:
         """perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__widtg * 2) + (self.__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """string"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join("#" * self.__width
-                                for i in range(self.__height))
+                                for j in range(self.__height))
         return string
