@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""
-rectangle
+""""
+calculate area
 """
 
 
 class Rectangle:
     """rectangle"""
-    def ___init___(self, width=0, height=0):
-        """rectangle"""
+    def __init__(self, width=0, height=0):
+        """rectanglr"""
         self.height = height
         self.width = width
 
@@ -27,12 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """height"""
+        """hwoght"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """width"""
+        """height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -50,13 +50,13 @@ class Rectangle:
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """string"""
+        """self"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join("#" * self.__width
-                                for j in range(self.__height))
+                                for j in range(self.height))
         return string
 
     def __repr__(self):
-        """repr"""
-        return "Retangle({:d}, {:d})".format(self.__width, self.__height)
+        """self"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
