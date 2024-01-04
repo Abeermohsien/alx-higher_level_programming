@@ -7,7 +7,7 @@ calculate area
 class Rectangle:
     """rectangle"""
 
-    number_of_instance = 0
+    number_of_instances = 0
     """self"""
 
     print_symbol = '#'
@@ -38,8 +38,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, value):
-        """height"""
+    def height(self, value): 
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
