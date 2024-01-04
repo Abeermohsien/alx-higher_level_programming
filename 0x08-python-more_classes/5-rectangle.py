@@ -1,36 +1,66 @@
-#!/usr/bin/python3                              """                                             rectangle                                       """                                             
-class Rectangle:                                    """rectangle"""                                 def ___init___(self, width=0, height=0):            """rectangle"""                                 self.height = height
-        self.width = width                                                                          @property
+#!/usr/bin/python3
+""""
+calculate area
+"""
+
+
+class Rectangle:
+    """rectangle"""
+    def __init__(self, width=0, height=0):
+        """rectanglr"""
+        self.height = height
+        self.width = width
+
+    @property
     def width(self):
         """width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """width"""
         if type(value) is not int:
-            raise TypeError("width must be an in
-teger")                                                 if value < 0:                                       raise ValueError("width must be >= 0
-")                                                      self.__width = value                                                                        @property                                       def height(self):
-        """height"""
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """hwoght"""
         return self.__height
 
     @height.setter
-    def height(self, value):                            """width"""                                     if type(value) is not int:                          raise TypeError("height must be an integer")
-        if value < 0:                                       raise ValueError("height must be >= 0")                                                     self.__height = value                                                                           def area(self):                                     """area"""
-        def perimeter:
-            """perimeter"""                                 if self.__width == 0 or self.__heigh
-t == 0:
-                return 0                                    return (self.__widtg * 2) + (self.__
-height * 2)
+    def height(self, value):
+        """height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
-        def __str__(self):
-            """string"""
-            str = ""                                        if self.__width != 0 and self.__height != 0:
-                str += "\n".join("#" * self.__width for j in range(self.__height))
-                return str
-            def __repr__(self):
-                """repre"""
-                return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-            def __del__(self)
-            """del"""
-            print("Bye rectangle...")
+    def area(self):
+        """area"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """self"""
+        string = ""
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join("#" * self.__width
+                                for j in range(self.height))
+        return string
+
+    def __repr__(self):
+        """self"""
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """self"""
+        print("Bye rectangle...")
