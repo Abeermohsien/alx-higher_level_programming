@@ -39,19 +39,20 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-        def area(self):
-            """area"""
+    def area(self):
+        """area"""
+        return self.__width * self.__height
 
-        def perimeter(self):
-            """perimeter"""
-            if self.__width == 0 or self.__height == 0:
-                return 0
-            return (self.__widtg * 2) + (self.__height * 2)
+    def perimeter(self):
+        """perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__widtg * 2) + (self.__height * 2)
 
-        def __str__(self):
-            """string"""
-            str = ""
-            if self.__width != 0 and self.__height != 0:
-                str += "\n".join("#" * self.__width
-                                 for j in range(self.__height))
-                return str
+    def __str__(self):
+        """string"""
+        str = ""
+        if self.__width != 0 and self.__height != 0:
+            str += "\n".join("#" * self.__width
+                             for j in range(self.__height))
+        return str
