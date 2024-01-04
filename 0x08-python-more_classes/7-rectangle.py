@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''rectangle class'''
 
+
 class Rectangle:
     """rectangle"""
 
@@ -58,11 +59,13 @@ class Rectangle:
             return ((str(self.print_symbol) * self.width + "\n") *
                     self.height)[:-1]
 
-            def __repr__(self):
-                """repr"""
-                return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+        def __repr__(self):
+            """repr"""
+            str1 = str(self.width)
+            str2 = str(self.height)
+            return "Rectangle(" + str1 + ", " + str2 + ")"
 
-            def __del__(self):
-                """delet"""
-                print("Bye rectangle...")
-                Rectangle.number_of_instances -= 1
+        def __del__(self):
+            """delet"""
+            print("Bye rectangle...")
+            Rectangle.number_of_instances -= 1
