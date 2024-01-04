@@ -3,6 +3,7 @@
 rectangle
 """
 
+
 class Rectangle:
     """rectangle"""
     def ___init___(self, width=0, height=0):
@@ -41,7 +42,7 @@ class Rectangle:
         def area(self):
             """area"""
 
-        def perimeter:
+        def perimeter(self):
             """perimeter"""
             if self.__width == 0 or self.__height == 0:
                 return 0
@@ -51,5 +52,6 @@ class Rectangle:
             """string"""
             str = ""
             if self.__width != 0 and self.__height != 0:
-                str += "\n".join("#" * self.__width for j in range(self.__height))
+                str += "\n".join("#" * self.__width
+                                 for j in range(self.__height))
                 return str
