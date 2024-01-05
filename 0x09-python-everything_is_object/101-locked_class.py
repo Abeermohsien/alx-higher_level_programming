@@ -2,7 +2,7 @@
 """locked class"""
 
 
-class lockedClass:
+class LockedClass:
     """
     locked class
     """
