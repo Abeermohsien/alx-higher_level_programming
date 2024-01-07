@@ -4,10 +4,9 @@
 #include <locale.h>
 #include <Python.h>
 #include <unicodeobject.h>
-
 /**
- * print_python_sting - prints info about python strings
- * @p: address of pyobject struct
+ * print_python_string - prints
+ * @p: address
  */
 void print_python_string(PyObject *p)
 {

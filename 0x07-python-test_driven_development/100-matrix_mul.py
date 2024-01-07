@@ -1,21 +1,9 @@
 #!/usr/bin/python3
-"""Module for matrix_mul method."""
+"""Module  matrix_mul """
 
 
 def matrix_mul(m_a, m_b):
-    """Multiplies one matrix by another.
-    Args:
-        m_a: the first matrix
-        m_b: the second matrix
-    Returns:
-        matrix: the product
-    Raises:
-        TypeError: If m_a or m_b are not lists.
-        TypeError: If m_a or m_b are not lists of lists.
-        ValueError: If m_a or m_b are empty lists/matrices.
-        TypeError: If m_a or m_b contain a non int/float.
-        TypeError: If m_a or m_b are not rectangular.
-        ValueError: If m_a or m_b can't be multiplied.
+    """Multiplies matrix
     """
 
     if not isinstance(m_a, list):
@@ -67,16 +55,17 @@ def matrix_mul(m_a, m_b):
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
-    res = [[] for i in range(len(m_a))]
+    rets = [[] for i in range(len(m_a))]
 
     for i in range(len(m_a)):
         for j in range(len(m_b[0])):
             c = 0
             for k in range(len(m_b)):
                 c += m_a[i][k] * m_b[k][j]
-            res[i].append(c)
+            rets[i].append(c)
 
-    return res
+    return rets
+
 
 if __name__ == "__main__":
     import doctest
