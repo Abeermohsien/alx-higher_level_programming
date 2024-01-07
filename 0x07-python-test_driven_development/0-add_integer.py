@@ -3,7 +3,7 @@
 
 
 def add_integer(a, b=98):
-    """Adds 2 integers 
+    """Adds 2 integers
     """
 
     if type(a) not in (int, float):
@@ -11,6 +11,7 @@ def add_integer(a, b=98):
     if type(b) not in (int, float):
         raise TypeError('b must be an integer')
     return int(a) + int(b)
+
 
 if __name__ == "__main__":
     import doctest
