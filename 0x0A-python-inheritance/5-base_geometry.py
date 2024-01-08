@@ -2,6 +2,6 @@
 """base geometry"""
 
 
-def BaseGeometry:
+class BaseGeometry:
     """BaseGeometry"""
     pass
