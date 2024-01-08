@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""module
-"""
+"""module"""
 
 
-def MyList(list):
+class MyList(list):
     """print sorted"""
     def print_sorted(self):
         """print sorted"""
