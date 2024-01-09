@@ -13,7 +13,7 @@ class Student:
     def to_json(self, attrs=None):
         """json"""
         try:
-            for att in atts:
+            for att in attrs:
                 if type(att) is not str:
                     return self.__dict__
 
@@ -21,6 +21,6 @@ class Student:
             return self.__dict__
         dictt = dict()
         for k, val in self.__dict__.items():
-            if k in atts:
+            if k in attrs:
                 dictt[k] = val
         return dictt
