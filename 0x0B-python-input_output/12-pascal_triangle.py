@@ -8,11 +8,11 @@ def pascal_triangle(n):
         return []
 
     triang = [[1]]
-    while len(teiangle) != n:
+    while len(triang) != n:
         trin = triang[-1]
         tmp = [1]
         for j in range(len(trin) - 1):
             tmp.append(trin[i] + trin[i + 1])
-            tmp.append(1)
-        traingle.append(tmp)
-    return traigle
+        tmp.append(1)
+        triang.append(tmp)
+    return triang
