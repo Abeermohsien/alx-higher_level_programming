@@ -10,7 +10,7 @@ def append_after(filename="", search_string="", new_string=""):
             lne = filee.readline()
             if lne == "":
                 break
-            l_list.append(l)
+            l_list.append(lne)
             if search_string in lne:
                 l_list.append(new_string)
     with open(filename, "w", encodiny="utf-8") as filee:
