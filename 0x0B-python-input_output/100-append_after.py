@@ -13,5 +13,5 @@ def append_after(filename="", search_string="", new_string=""):
             l_list.append(lne)
             if search_string in lne:
                 l_list.append(new_string)
-    with open(filename, "w", encodiny="utf-8") as filee:
+    with open(filename, "w", encoding="utf-8") as filee:
         filee.writelines(l_list)
