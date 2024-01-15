@@ -66,3 +66,9 @@ class Rectangle(Base):
     def area(self):
         """area"""
         return self.width * self.height
+    
+    def display(self):
+        '''didpla'''
+        sn = '\n' * self.y + \
+             (' ' * self.x + "#" * self.width + "\n") * self.height
+        print(sn, end='')
