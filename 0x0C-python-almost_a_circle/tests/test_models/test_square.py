@@ -193,7 +193,7 @@ were given"
         r.y = 0
         self.assertEqual(r.x, 0)
         self.assertEqual(r.y, 0)
- 
+
     def test_I_area_no_args(self):
         '''area'''
         r = Square(5)
@@ -231,7 +231,7 @@ were given"
         with self.assertRaises(ValueError) as e:
             s1.size = 0
         self.assertEqual(str(e.exception), "width must be > 0")
- 
+
     def test_J_display_no_args(self):
         '''isp'''
         r = Square(9)
@@ -434,7 +434,7 @@ were given"
         r = Square(10, 20, 30, 40)
         s = '[Square] (40) 20/30 - 10'
         self.assertEqual(str(r), s)
- 
+
     def test_L_update_no_args(self):
         '''updated arguments'''
         r = Square(5, 2)

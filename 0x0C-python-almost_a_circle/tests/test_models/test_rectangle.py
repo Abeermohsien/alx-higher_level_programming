@@ -253,7 +253,6 @@ given"
         r3 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(r3.area(), 56)
 
-    # ----------------- Tests for #5 & #7 ------------------------
     def test_J_display_no_args(self):
         '''displayethod '''
         r = Rectangle(9, 8)
@@ -376,8 +375,6 @@ given"
 """
         self.assertEqual(f.getvalue(), s)
 
-        # ----------------- Tests for #6 ------------------------
-
     def test_K_str_no_args(self):
         '''strmethod signre.'''
         r = Rectangle(5, 2)
@@ -405,7 +402,6 @@ given"
         r2 = Rectangle(5, 5, 1)
         self.assertEqual(str(r2), "[Rectangle] (1) 1/0 - 5/5")
 
-        # ----------------- Tests for #8 & #9 ------------------------
     def test_L_update_no_args(self):
         '''update'''
         r = Rectangle(5, 2)
@@ -558,9 +554,7 @@ given"
         self.assertEqual(str(r1), "[Rectangle] (89) 4/10 - 2/3")
 
         r1.update(89, 2, 3, 4, 5)
-        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/3")
-
-    # ----------------- Tests for #13 ------------------------
+        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/5) 
     def test_M_to_dictionary(self):
         '''to_dictionary()'''
         with self.assertRaises(TypeError) as e:

@@ -264,7 +264,6 @@ were given"
         self.assertFalse(r1 is r2)
         self.assertFalse(r1 == r2)
 
-        # ----------------- Tests for #19 ------------------------
     def test_K_load_from_file(self):
         '''tests '''
         r1 = Rectangle(10, 7, 2, 8)
