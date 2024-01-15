@@ -61,4 +61,4 @@ class Rectangle(Base):
         if eq and value < 0:
             raise ValueError("{} must be >= 0".format(name))
         elif not eq and value <= 0:
-            raise ValueError("{} must be > 0".format(name)) 
+            raise ValueError("{} must be > 0".format(name))
