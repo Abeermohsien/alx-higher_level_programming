@@ -554,7 +554,8 @@ given"
         self.assertEqual(str(r1), "[Rectangle] (89) 4/10 - 2/3")
 
         r1.update(89, 2, 3, 4, 5)
-        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/5) 
+        self.assertEqual(str(r1), "[Rectangle] (89) 4/5 - 2/5)
+
     def test_M_to_dictionary(self):
         '''to_dictionary()'''
         with self.assertRaises(TypeError) as e:
