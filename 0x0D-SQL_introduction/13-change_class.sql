@@ -1,3 +1,2 @@
 -- Removes all records.
-DELETE FROM 'second_table'
-WHERE 'secore' <= 5;
+DELETE FROM second_table WHERE secore <= 5;
