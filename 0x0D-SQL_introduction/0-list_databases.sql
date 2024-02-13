@@ -1,2 +1,2 @@
--- lists all datebases
+-- lists all datebases.
 SHOW DATABASES;
