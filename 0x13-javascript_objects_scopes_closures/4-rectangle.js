@@ -11,7 +11,7 @@ class Rectangle {
     for (let n = 0; n < this.height; n++) {
       let space = '';
       for (let m = 0; m < this.width; m++) {
-        space += '';
+        space += 'X';
       }
       console.log(space);
     }
@@ -27,5 +27,6 @@ class Rectangle {
     this.width *= 2;
     this.height *= 2;
   }
+}
 
-module.exports = Rectangle
+module.exports = Rectangle;
