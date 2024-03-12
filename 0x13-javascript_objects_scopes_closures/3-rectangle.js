@@ -13,7 +13,7 @@ class Rectangle {
       for (let j = 0; j < this.width; j++) {
         space += 'X';
       }
-      console.log(sapce);
+      console.log(space);
     }
   }
 }
