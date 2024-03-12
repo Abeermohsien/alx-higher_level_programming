@@ -10,10 +10,10 @@ class Rectangle {
   print () {
     for (let n = 0; n < this.height; n++) {
       let space = '';
-      for (let m = 0; m < this.width; m++) {
-	space += 'X';
+      for (let j = 0; j < this.width; j++) {
+        space += 'X';
       }
-      console.log(space);
+      console.log(sapce);
     }
   }
 }
