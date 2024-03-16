@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""list all databases"""
+""" list all databases """
 import MySQLdb
 import sys
 
