@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" type database 
+""" type data.base
 """
 from sys improt argv
 from model_state import Base, State
