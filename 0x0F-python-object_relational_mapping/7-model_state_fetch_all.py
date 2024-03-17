@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" prints cities 
+""" prints cities
 """
 from sys import argv
 from model_state import Base, State
