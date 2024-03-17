@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" types state withe name given 
+""" type state with name 
 """
 import sys
 from model_state import Base, State
@@ -12,7 +12,7 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engcre)
     Session = sessionmaker(bind=engcre)
-    ses = Session()
-    for n in ses.query(State).filter(State.name.like('%a%')):
-        ses.delete(n)
-    ses.commit()
+    session = Session()
+    for instance in session.query(State).filter(State.name.like('%a%')):
+        session.delete(instance)
+    session.commit()
