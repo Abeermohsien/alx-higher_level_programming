@@ -1,11 +1,18 @@
 #!/usr/bin/python3
-""" create states class 
 """
-from sys import argv
-from model_state import Base, State
+create a model state
+"""
+from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy.ext.declarative import declarative_base
 
-from sqlalchemy import (create_engine)
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
-if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
+
+class State(Base):
+    """
+    base calss
+    """
+    __tablename__ = 'states'
+    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
