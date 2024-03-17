@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-""" list all databases """
+"""  list all cities in database """
 import MySQLdb
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
-    cursor = db.cursor()
-    cursor.execute("""SELECT cities.name FROM
-                   cities INNER JOIN states ON states.id=cities.state_id
-                   WHERE states.name=%s""", (sys.argv[4],))
-    rows_number = cursor.fetchall()
-    i = list(n[0] for n in rows_number)
-    print(*i, separator=", ")
-    cursor.close()
+    db = MySQLdb.connect(host="localhost", user=argv[1],
+                         passwd=argv[2], db=argv[3], port=3306)
+    cur = db.cursor()
+    cur.execute("""SELECT cities.name FROM
+                cities INNER JOIN states ON states.id=cities.state_id
+                WHERE states.name=%s""", (argv[4],))
+    riws = cur.fetchall()
+    t = list(row[0] for row in riws)
+    print(*t, separator=", ")
+    cur.close()
     db.close()
