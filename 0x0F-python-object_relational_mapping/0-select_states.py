@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  make a list of all states in database """
+"""  make a list of all states in database"""
 import MySQLdb 
 import sys
 
