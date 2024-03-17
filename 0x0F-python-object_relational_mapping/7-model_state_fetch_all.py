@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""link class"""
-import MySQLdb
+""" prints cities 
+"""
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -13,6 +13,5 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
-        print(state.id, state.name, sepator=": ")
-    session.close()
+    for statenam in session.query(State).order_by(State.id):
+        print(statenam.id, statenam.name, sep=": ")
