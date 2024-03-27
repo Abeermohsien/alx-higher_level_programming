@@ -6,7 +6,7 @@ Find the peaking
 
 def find_peak(list_of_integers):
     """
-    return a list of ints of peaks 
+    Return a list of ints of peaks
     """
     if len(list_of_integers) > 0:
         list_of_integers.sort()
