@@ -2,7 +2,7 @@
 """
 Takes a URL and send a request to it and display a variable value
 """
-from urllib.request import urlopen 
+from urllib.request import urlopen
 from sys import argv
 
 
