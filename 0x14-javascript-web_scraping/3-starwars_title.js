@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// prints title of star wars 
+// prints title of star wars
 
 const req = require('request');
 const URL = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
